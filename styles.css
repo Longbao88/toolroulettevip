@@ -1,0 +1,203 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-image: url('/mnt/data/matrix-code-background-uhdpaper.com-hd-8.2832.jpg'); /* Thêm ảnh nền mới */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.container {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Lớp nền mờ để chữ dễ đọc hơn */
+    border-radius: 15px;
+    width: 80%;
+    margin: 50px auto;
+    border: 2px solid #ffcc00; /* Viền vàng đậm */
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.8); /* Hiệu ứng ánh sáng */
+}
+
+h1 {
+    font-size: 3em;
+    color: #ffcc00; /* Màu vàng đặc trưng của casino */
+    text-shadow: 2px 2px 5px #ff0000; /* Ánh sáng xung quanh chữ */
+    margin-bottom: 20px;
+}
+
+.wheel-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#rouletteWheel {
+    border-radius: 50%;
+    background-color: #222222;
+    box-shadow: 0px 0px 15px #ffcc00; /* Ánh sáng quanh vòng quay */
+}
+
+#countdown, #analysisStatus, #result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#countdown {
+    color: #ff0000; /* Màu đỏ cho đếm ngược */
+}
+
+#analysisStatus {
+    color: #00ff00; /* Màu xanh lá cây cho trạng thái phân tích */
+}
+
+#result {
+    font-size: 30px;
+    color: #ffcc00; /* Màu vàng cho kết quả */
+    text-shadow: 1px 1px 3px #ff0000; /* Ánh sáng xung quanh kết quả */
+}
+
+#randomNumber {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+#evenOdd {
+    font-size: 32px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+/* Adding hacker image as background */
+body { background-image: url('/mnt/data/hacker-guy-fawkes-mask-code-black-hoodie-5k-8k-3840x2160-5575.jpg'); background-size: cover; }
+
+/* Adding new background image */
+body { background-image: url('/mnt/data/7bc2ee26-7398-48de-b777-f5b39b2c58eb.png'); background-size: cover; }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+    }
+    h1 {
+        font-size: 3em;
+        color: gold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    .countdown {
+        font-size: 2em;
+        font-weight: bold;
+        color: red;
+    }
+    .message {
+        font-size: 1.5em;
+        margin-top: 20px;
+        color: yellow;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    }
+    
+/* Ensure the body takes up full screen and the background covers the entire viewport */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('./images/new_background_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Make sure the images fill the screen and are responsive */
+#new-image-container img, #gif-container img {
+    width: 100%;
+    height: 100vh; /* Make the image fill the full height of the viewport */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+/* Adjust the container for the main content to prevent overflow */
+.container {
+    position: relative;
+    z-index: 10;
+    color: white;
+    padding: 20px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Parallax background effect for the website */
+body {
+    background-attachment: fixed;
+}
+
+/* Add animations for images to zoom in as they come into view */
+#new-image-container img, #gif-container img {
+    animation: zoomIn 2s ease-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Smooth text animation on scroll */
+h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add subtle scroll effect to images inside containers */
+.container {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s forwards;
+    animation-delay: 1s;
+}
+
+/* Animation for AI analysis text */
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Animation for spinning text */
+@keyframes spinText {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

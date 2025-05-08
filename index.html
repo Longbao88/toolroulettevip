@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Casino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="margin: 0; padding: 0;">
+    <div id="new-image-container" style="margin-top: 0;" style="margin-top: 20px;">
+        <img src="./images/new_image.png" alt="New Image" style="width: 100%; max-width: 600px; height: auto;">
+    </div>
+    
+    <div class="container">
+        <h1>AI Casino: Kết Quả Dự Đoán</h1>
+        <div class="wheel-container">
+            <!-- Thay thế bằng AI phân tích -->
+            <div id="aiAnalysis">
+                <p><span style="color: #ff0000;"><span id="aiAnalysisText" style="font-size: 20px; font-weight: bold; color: red; animation: moveText 2s infinite;">AI đang phân tích...</span> 
+    <div id="gif-container" style="margin-top: 20px;">
+        <img src="./images/giphy.gif" alt="AI Analysis" style="width: 100%; max-width: 600px; height: auto;">
+    </div>
+    </span></p>
+            </div>
+        </div>
+        <p id="countdown">VÁN TIẾP THEO SAU</p>
+        <p id="analysisStatus"></p>
+        <p id="result">Số Dự Đoán: <span id="randomNumber"></span> | Dự Đoán Chẵn/Lẻ: <span id="evenOdd"></span></p>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        let countdownTime = 30;  // Giây ban đầu
+        let countdownElement = document.getElementById('countdown');
+        let messageElement = document.getElementById('message');
+
+        // Hàm đếm ngược
+        function startCountdown() {
+            countdownElement.textContent = countdownTime + " giây";
+            messageElement.textContent = "<span id="aiAnalysisText" style="font-size: 20px; font-weight: bold; color: red; animation: moveText 2s infinite;">AI đang phân tích...</span> 
+    <div id="gif-container" style="margin-top: 20px;">
+        <img src="./images/giphy.gif" alt="AI Analysis" style="width: 100%; max-width: 600px; height: auto;">
+    </div>
+    ";
+
+            let countdownInterval = setInterval(function() {
+                countdownTime--;
+
+                // Cập nhật thời gian còn lại
+                countdownElement.textContent = countdownTime + " giây";
+
+                if (countdownTime <= 0) {
+                    clearInterval(countdownInterval);  // Dừng đếm ngược
+
+                    messageElement.textContent = "Phân tích hoàn tất!";
+                    
+                    setTimeout(function() {
+                        messageElement.textContent = "Đang khởi động lại phân tích...";
+                        countdownTime = 30; // Reset thời gian
+                        startCountdown(); // Bắt đầu lại đếm ngược
+                    }, 2000);  // Sau 2 giây, bắt đầu lại
+                }
+            }, 1000); // Chạy mỗi giây
+        }
+
+        // Bắt đầu đếm ngược ngay khi tải trang
+        startCountdown();
+    </script>
+    
+
+<script>
+    let countdownTime = 30;  // Giây ban đầu
+    let countdownElement = document.getElementById('countdown');
+    let messageElement = document.getElementById('message');
+
+    // Hàm đếm ngược
+    function startCountdown() {
+        countdownElement.textContent = countdownTime + " giây";
+        messageElement.textContent = "<span id="aiAnalysisText" style="font-size: 20px; font-weight: bold; color: red; animation: moveText 2s infinite;">AI đang phân tích...</span> 
+    <div id="gif-container" style="margin-top: 20px;">
+        <img src="./images/giphy.gif" alt="AI Analysis" style="width: 100%; max-width: 600px; height: auto;">
+    </div>
+    ";
+
+        let countdownInterval = setInterval(function() {
+            countdownTime--;
+
+            // Cập nhật thời gian còn lại
+            countdownElement.textContent = countdownTime + " giây";
+
+            if (countdownTime <= 0) {
+                clearInterval(countdownInterval);  // Dừng đếm ngược
+                messageElement.textContent = "Phân tích hoàn tất!";
+                
+                // Sau 2 giây, bắt đầu lại đếm ngược
+                setTimeout(function() {
+                    messageElement.textContent = "Đang khởi động lại phân tích...";
+                    countdownTime = 30; // Reset thời gian
+                    startCountdown(); // Bắt đầu lại đếm ngược
+                }, 2000);  // Đợi 2 giây trước khi bắt đầu lại
+            }
+        }, 1000); // Chạy mỗi giây
+    }
+
+    // Bắt đầu đếm ngược ngay khi tải trang
+    startCountdown();
+</script>
+
+
+<div id="banner" style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: rgba(0, 0, 0, 0.7); color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px; z-index: 1000;">
+    ĐĂNG KÍ TẠI: <a href="https://www.f168.codes" style="color: #ffcc00; text-decoration: none;">WWW.F168.CODES</a>
+</div>
+
+<div id="code-entry" style="text-align: center; margin-top: 20px;">
+    <label for="userCode" style="font-size: 20px; color: white;">Nhập Mã Code Để Quay:</label>
+    <input type="text" id="userCode" style="padding: 10px; font-size: 16px; margin: 10px;" placeholder="Nhập mã code" />
+    <button onclick="checkCode()" style="padding: 10px 20px; font-size: 16px; background-color: green; color: white; border: none; cursor: pointer;">Quay</button>
+    <p id="errorMessage" style="color: red; font-size: 18px; display: none;">Mã code không hợp lệ. Vui lòng thử lại.</p>
+</div>
+</body>
+</html>
+
+    <div id="extra-image-container" style="margin-top: 20px;">
+        <img src="/mnt/data/resized_extra_image.png" alt="Extra Image" style="width: 100%; max-width: 100%; height: auto;">
+    </div>
+    
+<script>
+    let validCodes = `6WA66FG7
+K57SJOA0
+2PVHI6KM
+T6LTLH7C
+1QT1KWPN
+WC6Y6Z6Y
+MG2EKY57
+AZYDSL3O
+D4V1KY2L
+4IK4RZF9
+VC7S025M
+O25KPQSD
+PAD7V7QK
+7YWYUK5O
+QQU3Y6I4
+PR1M81OZ
+VG8VO0VX
+2X5E9THC
+ZC5V6S9K
+VRI6NKQF
+VYO0ADSW
+Q0W7A9HF
+MBJHWF9K
+0OE00C3V
+IVB1U5HA
+IF4ROLF2
+NSITLA22
+JE78655L
+03M70PF1
+YQKH7QG0
+LCBJWEUJ
+YCOXNWA4
+05JSJZUU
+JLI1OO50
+PZE1IQVM
+ZTU0F1GC
+A8QAGGKH
+9DRHS2RT
+WUPXDJF4
+WWKZ1F7Q
+9IVWEKE5
+JLFUYUTU
+VLEBB946
+284I2593
+IT6GQAN0
+RIQLFJOQ
+R4OOW7YE
+DKMARHRG
+5XK9O17G
+A5GFY3ZB
+5RU0524O
+4KQRVVQM
+GONR7A5C
+7R5L34DS
+6CO4DY8A
+I7PDP0MG
+R174OY38
+IQGHRX8X
+EEX38PCK
+2Z7G9H30
+6GB03BXR
+6MZ5ER76
+P9R0C46Z
+P7VYU4CK
+3BAEE8V5
+12UM53SW
+RYLTPDJ9
+E3VT7BAI
+WXBSBHVT
+DFNTYVWC
+T7475R8J
+TWAIXS7B
+P5MV8DU6
+69TU1UYY
+271IGZD2
+D9KJXN5E
+2B9GU3DR
+JVY9OKJR
+OYO1QTDX
+IRLSIOUY
+YH1D450Y
+HXB68DWV
+S5E8R32L
+XRYIHJFE
+VK1H1VXP
+JTELMQXF
+FS6QLX7Y
+SXOPM99E
+2RPATN4R
+9M9C5C20
+ZS1RL9RX
+LWWAQBSX
+3V4HZJ3D
+Z2B2OB4Q
+G2NVQY1L
+L3EYRQ9Z
+B4D9GN1G
+Q86V60QJ
+MA3IMZJZ
+PZVXJV1K
+8L3GEBL2
+LM1V0WO3
+M1ZMNEZ7
+UTHS16J7
+RHB70CF0
+RCPP12W0
+HKANITMY
+6YR955LE
+YTL5H89N
+3M6OBF2D
+JL5PLUQQ
+HJWHPBN7
+CQP8ND2D
+GD4G2P0P
+V6GDW15Q
+UN3O3BBD
+HA4FAZGG
+AZCIYIN1
+XP3WSJ0Z
+O7YUB0S1
+3ZIAN2P9
+NHYHGYYW
+X4IOOPS9
+HQJ79IG6
+8739NL9T
+SR8D7GFD
+D6J614J7
+B0IILPRC
+295VG94U
+GJW3PE69
+E3M6PKAL
+6IEVREMR
+60EGDT07
+VHVJQW2B
+MDX3X8I7
+N2LME6FV
+VZ8AFY6S
+D1AHLSTR
+URK9DQLH
+A6GI0XEN
+TM7VTO5V
+D9G19VQ6
+BR2K160O
+SOZUNMG2
+6ME16A29
+UFP52ES1
+2KM00SCC
+Y0DAJKYZ
+U1S6IMBY
+6D1NATZ2
+UFQI0E4E
+44V7THS7
+3XQ17A87
+XJZPTKQ7
+G2LZ727Z
+VCHD31GF
+W6CPLO06
+JLVBNHYC
+PQBU3AHC
+R7MLZ6L4
+U5UV2PE9
+DF9W3L0N
+G4TML07B
+KMAJX0X7
+H33YCYFI
+NKX5FM8W
+L6OJOFL2
+4SJFNMBD
+1PT4XRG8
+Y1M5X5TQ
+BK52WK40
+MW1I61TB
+U3OEN14O
+N04KMZ9Y
+E6X8S4X6
+14EVQ1PE
+P68JWHH1
+2JZX22DG
+ODQI1AMB
+CWTQ36UL
+MLJS4XIB
+PVCQOEV6
+GTSA8P6E
+B7YJ0O74
+8COW2M2I
+GGNQMZC3
+9GIMXWAR
+CMWLQ1L6
+IDVKVI74
+CT2KZDPL
+JDCVN6Y9
+T3VCYAFE
+B0MQIG24
+V71PN4L2
+LUE6IIES
+BT6QWBZW
+ULHJPSKY
+YV3DTC24
+LMEW7NXR
+0Z7R2DYT`.split("\n");
+
+    function checkCode() {
+        let userCode = document.getElementById('userCode').value.trim();
+        let errorMessage = document.getElementById('errorMessage');
+
+        if (validCodes.includes(userCode)) {
+            errorMessage.style.display = 'none';
+            alert('Mã code hợp lệ! Bạn có thể quay.');
+            // Call function to start spinning or perform desired action here
+        } else {
+            errorMessage.style.display = 'block';
+        }
+    }
+</script>
